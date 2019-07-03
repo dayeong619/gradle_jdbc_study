@@ -9,7 +9,6 @@ public class Employee {
 	private Employee manager;
 	private int salary;
 	private Department dno;
-	private byte[] pic;
 	
 	public Employee() {
 		// TODO Auto-generated constructor stub
@@ -19,14 +18,14 @@ public class Employee {
 		this.empNo = empNo;
 	}
 
-	public Employee(int empNo, String empName, String title, Employee manager, int salary, Department dno, byte[] pic) {
+	public Employee(int empNo, String empName, String title, Employee manager, int salary, Department dno) {
 		this.empNo = empNo;
 		this.empName = empName;
 		this.title = title;
 		this.manager = manager;
 		this.salary = salary;
 		this.dno = dno;
-		this.pic = pic;
+		
 	}
 
 	public int getEmpNo() {
@@ -77,18 +76,10 @@ public class Employee {
 		this.dno = dno;
 	}
 
-	public byte[] getPic() {
-		return pic;
-	}
-
-	public void setPic(byte[] pic) {
-		this.pic = pic;
-	}
-
 	@Override
 	public String toString() {
-		return String.format("Employee [empNo=%s, empName=%s, title=%s, manager=%s, salary=%s, dno=%s, pic=%s]", empNo,
-				empName, title, manager, salary, dno, Arrays.toString(pic));
+		return String.format("Employee [empNo=%s, empName=%s, title=%s, manager=%s, salary=%s, dno=%s]", empNo,
+				empName, title, manager, salary, dno);
 	}
 
 	@Override
