@@ -4,7 +4,7 @@ public class Department {
 	private int deptNo;
 	private String deptName;
 	private int floor;
-	
+
 	public Department() {
 		// TODO Auto-generated constructor stub
 	}
@@ -45,7 +45,7 @@ public class Department {
 
 	@Override
 	public String toString() {
-		return String.format("Department [deptNo=%s, deptName=%s, floor=%s]", deptNo, deptName, floor);
+		return String.format("%s(%s층)", deptName, floor);
 	}
 
 	@Override
@@ -70,5 +70,7 @@ public class Department {
 		return true;
 	}
 
-	
+	public Object[] toArray() {
+		return new Object[] { String.format("D%03d", deptNo), deptName, floor };
+	}
 }
