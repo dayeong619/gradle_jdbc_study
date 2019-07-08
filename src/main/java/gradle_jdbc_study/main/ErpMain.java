@@ -1,26 +1,21 @@
-package gradle_jdbc_study;
+package gradle_jdbc_study.main;
 
 import java.awt.EventQueue;
+import java.util.Date;
 
 public class ErpMain {
-	
 
 	public static void main(String[] args) {
-		
-		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					System.out.println(System.getProperty("user.dir"));
-					System.out.println("첫번째 수정");
+					ErpApplication frame = new ErpApplication();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
-	
 
-	
-	
 	}
 }
